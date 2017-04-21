@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Forest Application</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    	<script src="discover.js"></script>
+	</head>
+
+	<body ng-app="homework" ng-controller="formController">
+	<div class="container">
+	<div class="col-md-6 col-md-offset-3">
+		<h1>Forest Application</h1>
+		<form ng-submit="processForm()">
+			<label>Forest id:</label>
+			<br/><input type="number" name="forestId" class="form-control" placeholder="i.e. 0" ng-model="formData.forestId"></br></br>
+			<label>Total:</label>
+			<br/><input  type="number" name="total" class="form-control" placeholder="i.e. 2" ng-model="formData.total"></br></br>
+			<button type="submit" class="btn btn-success btn-lg btn-block">
+				<span class="glyphicon glyphicon-flash"></span> Get Areas!
+			</button>
+		</form>
+		
+		<pre>
+			<div ng-repeat="area in cutDownAreas">
+    			{{area}}
+			</div>
+		</pre>
+	</div>
+	</div>
+	</body>
+</html>
+
